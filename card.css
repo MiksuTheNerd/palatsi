@@ -1,0 +1,32 @@
+.card {
+	width: 5em;
+	height: 7.5em;
+	background: rgb(230,230,230);
+	border-radius: 0.5em;
+	position: relative;
+	box-shadow: 0 0 0.3em 0.1em rgba(0,0,0,0.5);
+}
+.card>.suit {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 5em;
+}
+.card>.num {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0.3em;
+}
+.card>.num:last-child {
+	top: auto;
+	left: auto;
+	bottom: 0;
+	right: 0;
+	transform: rotateZ(180deg);
+}
+.card.back {
+	background: rgb(200,50,50);
+	border: 0.3em solid rgb(255,50,50);
+}

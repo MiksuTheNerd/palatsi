@@ -1,0 +1,76 @@
+* {
+	box-sizing: border-box;
+}
+body, html {
+	width: 100%;
+	height: 100%;
+	background: green;
+	position: absolute;
+}
+.tableCards {
+	display: grid;
+	grid-template-columns: repeat(3,5em);
+	column-gap: 1.5em;
+}
+.tableCards .card:nth-child(4),
+.tableCards .card:nth-child(5),
+.tableCards .card:nth-child(6) {
+	margin-top: -6em;
+	margin-left: 1em;
+}
+
+.hand {
+	width: 10em;
+	height: 10em;
+	position: relative;
+}
+
+.hand>div {
+	position: absolute;
+	transform-origin: bottom center;
+	rotate:calc((var(--card-number) / var(--total-cards) - 0.5) * 120deg);
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	transition: rotate 250ms;
+	height: 17em
+}
+
+.hand .card {
+	transition: translate 100ms;
+	translate: 0 5em;
+}
+.hand>div:hover .card {
+	translate: 0 0em 0;
+}
+
+.playerContainer {
+	background: rgb(100,100,200);
+	border-radius: 1em;
+	border: 0.5em solid rgb(50,50,100);
+	position: relative;
+	height: 28em;
+	width: 25em;
+	margin: 10px;
+	display: inline-block;
+}
+.playerContainer .hand {
+	position: absolute;
+	top: 5em;
+	left: 50%;
+	translate: -50% 0;
+}
+.playerContainer .tableCards {
+	position: absolute;
+	bottom: 1em;
+	left: 50%;
+	translate: -50% 0;
+}
+
+#tablePileDiv {
+	height: 8em;
+}
+
+#tablePileDiv .card {
+	position: absolute;
+}
