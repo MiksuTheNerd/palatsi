@@ -17,6 +17,7 @@
 
 #titleEl {
 	position: relative;
+	pointer-events: none;
 }
 
 #titleEl>span {
