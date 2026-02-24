@@ -1,0 +1,41 @@
+#start {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#start button {
+	margin: 0.3em;
+}
+#start button.selected {
+	background: var(--active1);
+}
+
+#titleEl {
+	position: relative;
+}
+
+#titleEl>span {
+	display: inline-block;
+	height: 5em;
+	opacity: 0;
+	transform-origin: bottom center;
+	position: absolute;
+	animation: 1s titleIn forwards;
+	bottom:-3em;
+	font-size: 80px;
+}
+
+@keyframes titleIn {
+	0% {
+		height: 1em;
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

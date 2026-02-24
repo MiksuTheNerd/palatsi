@@ -3,19 +3,31 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="startScreen.css">
 		<link rel="stylesheet" href="card.css">
 	</head>
 	<body>
 		<section id="start">
-			<h1>Palatsi</h1>
-			<label>Pelaajien määrä:<br><input id="playerCountInput" type="number"></label>
+			<h1 id="titleEl">PALATSI</h1>
+			<p>Pelaajien määrä:</p>
+			<div id="playerCount">
+				<!-- 
+					filled with <button onclick="playerCount=n">n</button>
+					generated using init() in main.js
+				-->
+				
+			</div>
+			<br>
 			<button onclick="startGame()">Aloita peli</button>
 		</section>
 		<main>
-			<button onclick="players[0].drawCard()">Nosta</button>
+			<button onclick="players[0].drawPile()">Nosta</button>
 			<div id="tablePileDiv"></div>
 			<div id="own"></div>
 		</main>
 		<script src="main.js"></script>
+		<script src="player.js"></script>
+		<script src="deck.js"></script>
+		<script src="card.js"></script>
 	</body>
 </html>
